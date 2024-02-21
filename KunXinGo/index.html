@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<title>KunXinGo | Головна</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240221185104">
+	<link rel="shortcut icon" href="../logo.svg">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<svg width="117" height="21" viewBox="0 0 117 21" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.18164 6.46292V0.00012207H8.42957V6.46292H6.18164Z" />
+						<path d="M12.6444 8.42987L0.561768 13.7687V8.42987L11.8014 2.52905L18.8262 2.81004V6.46293L12.6444 8.42987Z" />
+						<path d="M0.561983 18.2645L21.0743 19.6695C17.7025 14.2744 21.5427 8.42982 23.8843 6.18188C15.1173 8.42982 4.30853 13.4877 0 15.7356L0.561983 18.2645Z" />
+						<path d="M30.5015 20.0109V6.52729H32.9117V12.4945H32.949L38.685 6.52729H41.5997L34.724 13.5464L34.7427 12.4754L42.0481 20.0109H39.04L32.949 13.7759H32.9117V20.0109H30.5015Z" />
+						<path d="M45.9764 20.2021C44.818 20.2021 43.9523 19.877 43.3793 19.2267C42.8063 18.5765 42.5198 17.5819 42.5198 16.2431V10.3524H44.8553V16.224C44.8553 16.938 44.9986 17.4672 45.2851 17.8114C45.5715 18.143 46.0075 18.3087 46.5929 18.3087C47.2531 18.3087 47.7887 18.0792 48.1997 17.6202C48.6232 17.1612 48.835 16.5555 48.835 15.8032V10.3524H51.1705V20.0109H48.891V18.0409H49.1526C48.8786 18.7295 48.4613 19.265 47.9008 19.6475C47.3527 20.0173 46.7113 20.2021 45.9764 20.2021Z" />
+						<path d="M53.7059 20.0109V12.7623C53.7059 12.367 53.6935 11.9654 53.6686 11.5573C53.6436 11.1493 53.6063 10.7477 53.5565 10.3524H55.8172L56.004 12.265H55.7798C56.0788 11.5892 56.521 11.0728 57.1064 10.7158C57.6918 10.346 58.3707 10.1612 59.1429 10.1612C60.2515 10.1612 61.086 10.4799 61.6466 11.1174C62.2071 11.755 62.4873 12.7495 62.4873 14.1011V20.0109H60.1519V14.2158C60.1519 13.438 60.0024 12.8834 59.7034 12.5519C59.417 12.2076 58.981 12.0355 58.3956 12.0355C57.6731 12.0355 57.1002 12.265 56.6767 12.724C56.2532 13.183 56.0414 13.795 56.0414 14.5601V20.0109H53.7059Z" />
+						<path d="M63.5437 20.0109L68.962 12.6284V13.6803L63.7305 6.52729H66.5518L70.3446 11.9016H69.5786L73.3527 6.52729H76.1927L70.9425 13.6803V12.6284L76.3795 20.0109H73.5396L69.5412 14.3879H70.3633L66.365 20.0109H63.5437Z" />
+						<path d="M77.4986 20.0109V10.3524H79.8341V20.0109H77.4986ZM77.3679 8.53548V6.20215H79.9649V8.53548H77.3679Z" />
+						<path d="M82.3703 20.0109V12.7623C82.3703 12.367 82.3578 11.9654 82.3329 11.5573C82.308 11.1493 82.2707 10.7477 82.2208 10.3524H84.4816L84.6684 12.265H84.4442C84.7432 11.5892 85.1853 11.0728 85.7708 10.7158C86.3562 10.346 87.035 10.1612 87.8073 10.1612C88.9159 10.1612 89.7504 10.4799 90.3109 11.1174C90.8715 11.755 91.1517 12.7495 91.1517 14.1011V20.0109H88.8162V14.2158C88.8162 13.438 88.6668 12.8834 88.3678 12.5519C88.0813 12.2076 87.6454 12.0355 87.0599 12.0355C86.3375 12.0355 85.7645 12.265 85.341 12.724C84.9175 13.183 84.7058 13.795 84.7058 14.5601V20.0109H82.3703Z" />
+						<path d="M100.167 20.2021C98.6852 20.2021 97.4396 19.9216 96.4306 19.3606C95.4217 18.7996 94.6619 18.0027 94.1512 16.9699C93.6405 15.9371 93.3852 14.7131 93.3852 13.2978C93.3852 11.8697 93.6592 10.6393 94.2073 9.60652C94.7553 8.56098 95.54 7.7577 96.5614 7.19668C97.5953 6.62291 98.8346 6.33603 100.28 6.33603C101.239 6.33603 102.079 6.46991 102.802 6.73767C103.524 6.99268 104.16 7.36882 104.708 7.86608L103.904 9.77865C103.506 9.45989 103.126 9.20488 102.764 9.01362C102.403 8.82237 102.03 8.68849 101.643 8.61199C101.257 8.52273 100.809 8.47811 100.298 8.47811C98.8533 8.47811 97.7572 8.89887 97.0098 9.7404C96.2749 10.5692 95.9075 11.7613 95.9075 13.3169C95.9075 14.8725 96.2562 16.0583 96.9538 16.8743C97.6638 17.6903 98.7723 18.0983 100.28 18.0983C100.79 18.0983 101.301 18.0473 101.812 17.9453C102.335 17.8433 102.845 17.6967 103.344 17.5054L102.895 18.5382V14.5027H99.8124V12.7049H104.894V19.1885C104.284 19.5072 103.555 19.7559 102.708 19.9344C101.861 20.1129 101.014 20.2021 100.167 20.2021Z" />
+						<path d="M111.718 20.2021C110.747 20.2021 109.906 19.9981 109.196 19.5901C108.486 19.1821 107.932 18.602 107.533 17.8497C107.147 17.0974 106.954 16.2049 106.954 15.1721C106.954 14.1393 107.147 13.2532 107.533 12.5136C107.932 11.7613 108.486 11.1812 109.196 10.7732C109.906 10.3652 110.747 10.1612 111.718 10.1612C112.69 10.1612 113.531 10.3652 114.241 10.7732C114.963 11.1812 115.517 11.7613 115.904 12.5136C116.302 13.2532 116.501 14.1393 116.501 15.1721C116.501 16.2049 116.302 17.0974 115.904 17.8497C115.517 18.602 114.963 19.1821 114.241 19.5901C113.531 19.9981 112.69 20.2021 111.718 20.2021ZM111.718 18.3661C112.453 18.3661 113.039 18.1047 113.475 17.5819C113.911 17.0464 114.129 16.2431 114.129 15.1721C114.129 14.1011 113.911 13.3042 113.475 12.7814C113.039 12.2586 112.453 11.9972 111.718 11.9972C110.984 11.9972 110.398 12.2586 109.962 12.7814C109.526 13.3042 109.308 14.1011 109.308 15.1721C109.308 16.2431 109.526 17.0464 109.962 17.5819C110.398 18.1047 110.984 18.3661 111.718 18.3661Z" />
+					</svg>
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">Викуп</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Доставка</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Послуги</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Про нас</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Контакти</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Партнери</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__info info-header">
+					<div data-da=".menu__body, 767.98" class="info-header__currency">
+						<div class="currency-item">
+							<span class="currency-item__start-value currency-item__start-value--euro">1</span> = <span class="currency-item__last-value">41,75</span>
+						</div>
+						<div class="currency-item">
+							<span class="currency-item__start-value currency-item__start-value--dollar">1</span> = <span class="currency-item__last-value">38,63</span>
+						</div>
+					</div>
+					<div data-da=".menu__body, 767.98" class="info-header__social">
+						<a href="#" class="item-social item-social--telegram _icon-telegram"></a>
+						<a href="#" class="item-social item-social--whatsapp _icon-whatsapp"></a>
+					</div>
+					<a data-da=".menu__body, 479.98, 2" href="tel:380000000000" class="info-header__contacts contacts-header">
+						<div class="contacts-header__title">Зв'язатися з нами</div>
+						<span class="contacts-header__link">+380000000000</span>
+					</a>
+					<a href="tel:380000000000" class="info-header__small-mobile">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.28293 14.7173C14.9108 20.3451 16.5599 18.9984 17.2964 18.4722C17.4154 18.4046 20.1414 16.6481 18.4461 14.9532C14.514 11.0208 15.3119 16.132 11.5892 12.4102C7.86748 8.68756 12.9792 9.48599 9.04715 5.55399C7.35164 3.85851 5.59493 6.58469 5.52812 6.70297C5.00126 7.43951 3.65507 9.08958 9.28293 14.7173Z" fill="white" />
+						</svg>
+					</a>
+				</div>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+			</div>
+		</header>
+		<main class="page-home">
+			<section class="page-home__hero hero-home">
+				<div class="hero-home__slider main-slider swiper">
+					<div class="main-slider__wrapper swiper-wrapper">
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__container">
+								<picture><source srcset="img/home/main/01.webp" type="image/webp"><img class="main-slider__image ibg" src="img/home/main/01.jpg" alt="Image"></picture>
+								<div class="main-slider__bg"></div>
+								<div class="main-slider__content">
+									<h1 class="main-slider__title">
+										Карго доставка з Франції в Україну
+									</h1>
+									<div class="main-slider__subtitle">
+										<p>
+											Ми пропонуємо повний цикл послуг - від викупу товару у фабрик-виробників у Франції до його доставки кінцевому споживачеві в Україні
+										</p>
+									</div>
+									<a href="#" class="button">Отримати консультацію</a>
+								</div>
+							</div>
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__container">
+								<picture><source srcset="img/home/main/02.webp" type="image/webp"><img class="main-slider__image ibg" src="img/home/main/02.jpg" alt="Image"></picture>
+								<div class="main-slider__bg"></div>
+								<div class="main-slider__content">
+									<h1 class="main-slider__title">
+										Кваліфікований персонал
+									</h1>
+									<div class="main-slider__subtitle">
+										<p>
+											Наша команда здатна оперативно вирішувати всі робочі питання як на території Франції, так і в інших країнах.
+										</p>
+									</div>
+									<a href="#" class="button">Отримати консультацію</a>
+								</div>
+							</div>
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__container">
+								<picture><source srcset="img/home/main/03.webp" type="image/webp"><img class="main-slider__image ibg" src="img/home/main/03.jpg" alt="Image"></picture>
+								<div class="main-slider__bg"></div>
+								<div class="main-slider__content">
+									<h1 class="main-slider__title">
+										Оперативність та ефективність
+									</h1>
+									<div class="main-slider__subtitle">
+										<p>
+											Завдяки оптимальному розташуванню наших складів та власному вантажному автопарку, ми мінімізуємо час та вартість доставки
+										</p>
+									</div>
+									<a href="#" class="button">Отримати консультацію</a>
+								</div>
+							</div>
+						</div>
+						<div class="main-slider__slide swiper-slide">
+							<div class="main-slider__container">
+								<picture><source srcset="img/home/main/04.webp" type="image/webp"><img class="main-slider__image ibg" src="img/home/main/04.jpg" alt="Image"></picture>
+								<div class="main-slider__bg"></div>
+								<div class="main-slider__content">
+									<h1 class="main-slider__title">
+										Професійна підтримка у переговорах
+									</h1>
+									<div class="main-slider__subtitle">
+										<p>
+											Наші експерти готові надати вам допомогу у переговорах з французькими партнерами, включаючи узгодження технічних вимог
+										</p>
+									</div>
+									<a href="#" class="button">Отримати консультацію</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-slider__nav navigation-btn">
+						<button type="button" class="main-slider__prev navigation-btn__prev">
+							<svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13 5L1 5M1 5L5 9M1 5L5 1" stroke="#14171F" stroke-width="1.25" stroke-linecap="round" />
+							</svg>
+						</button>
+						<button type="button" class="main-slider__next navigation-btn__next">
+							<svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 5L13 5M13 5L9 9M13 5L9 1" stroke="#14171F" stroke-width="1.25" stroke-linecap="round" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__about about-home bg">
+				<div class="about-home__container">
+					<div class="text-block">
+						<div class="text-block__label">Про нас</div>
+						<h2 class="text-block__title">Наша компанія є експертом у сфері логістичних послуг</h2>
+					</div>
+					<div class="section-about__content">
+						<p>
+							Вже понад 10 років роботи на ринку. За цей період ми сформували стійкі партнерські відносини з виробничими підприємствами, провівши ретельну перевірку їхньої надійності та репутації. Ми пропонуємо повний спектр логістичних рішень для доставки вантажів з Франції до України.
+						</p>
+						<p>
+							Нашим основним завданням є надання високоякісних послуг у галузі логістики та обслуговування. Вибираючи нашу компанію, ви отримуєте надійного партнера, який пропонує оптимальне поєднання ціни та якості.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__service service-home bg">
+				<div class="service-home__container">
+					<div class="text-block">
+						<div class="text-block__label">Наші послуги</div>
+						<h2 class="text-block__title">Ми надаємо повний комплекс логістичних послуг з доставки вантажів з Франції до України</h2>
+					</div>
+					<div class="services-slider swiper">
+						<div class="services-slider__wrapper swiper-wrapper">
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/01.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Викуп товару
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Прямі закупівлі товарів у перевірених фабрик-виробників у Франції
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/02.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Консультація
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Узгодження технічних та комерційних умов
+											</p>
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Допомога у переговорах із китайськими партнерами
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/03.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Логістика та склад
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Власні склади на території Франції для консолідації та зберігання вантажу
+											</p>
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Оптимізація логістичних маршрутів для мінімізації витрат та часу доставки
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/04.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Контроль якості та упаковка
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Попередня перевірка якості товару
+											</p>
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Професійна упаковка для безпечного транспортування
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/05.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Страхування вантажу
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Пропонуємо повний спектр страхових послуг для забезпечення безпеки вашого вантажу на всіх етапах транспортування.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/06.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Митне оформлення
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Повний супровід митного оформлення вантажів згідно із законодавством України
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/07.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Юридична та фінансова підтримка
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Надання повного пакету документів
+											</p>
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Можливість застосування ПДВ до відрахування
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/08.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Технічна підтримка
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Підтримка клієнтів у робочий час на всіх етапах співробітництва
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="services-slider__slide item-service swiper-slide">
+								<div class="item-service__body">
+									<div class="item-service__icon">
+										<img class="ibg" src="img/home/complex/09.svg" alt="Image">
+									</div>
+									<div class="item-service__info">
+										<div class="item-service__name">
+											Бухгалтерська звітність
+										</div>
+										<div class="item-service__sub-item">
+											<p>
+												<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 1H10" />
+												</svg>
+												Підготовка та надання повної бухгалтерської звітності відповідно до вимог України
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="navigation-btn">
+							<button type="button" class="services-slider__prev navigation-btn__prev">
+								<svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13 5L1 5M1 5L5 9M1 5L5 1" stroke-width="1.25" stroke-linecap="round" />
+								</svg>
+							</button>
+							<button type="button" class="services-slider__next navigation-btn__next">
+								<svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 5L13 5M13 5L9 9M13 5L9 1" stroke-width="1.25" stroke-linecap="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__why why-home bg">
+				<div class="why-home__container">
+					<div class="text-block">
+						<div class="text-block__label">Наші переваги</div>
+						<h2 class="text-block__title">Чому клієнти працюють з нами та рекомендують своїм партнерам</h2>
+					</div>
+					<div class="why-home__items">
+						<div class="item-why">
+							<div class="item-why__body">
+								<div class="item-why__title">Юридична та бухгалтерська підтримка</div>
+								<div class="item-why__text">
+									Ми надаємо повний пакет документів відповідно до законодавства України і можливість прийняття податку до відрахування по всіх товарів і послуг, що купуються
+								</div>
+								<div class="item-why__image">
+									<picture><source srcset="img/home/why-me/01.webp" type="image/webp"><img class="ibg" src="img/home/why-me/01.jpg" alt="Image"></picture>
+								</div>
+							</div>
+						</div>
+						<div class="item-why">
+							<div class="item-why__body">
+								<div class="item-why__title">Контроль якості та упаковка</div>
+								<div class="item-why__text">
+									Ми проводимо ретельну перевірку та упаковку товару перед його відправкою до України
+								</div>
+								<div class="item-why__image">
+									<picture><source srcset="img/home/why-me/02.webp" type="image/webp"><img class="ibg" src="img/home/why-me/02.jpg" alt="Image"></picture>
+								</div>
+							</div>
+						</div>
+						<div class="item-why">
+							<div class="item-why__body">
+								<div class="item-why__title">Складські комплекси у Франції</div>
+								<div class="item-why__text">
+									Наші власні склади на території Китаю надають можливість консолідації вантажів, що оптимізує логістичні витрати
+								</div>
+							</div>
+						</div>
+						<div class="item-why">
+							<div class="item-why__body">
+								<div class="item-why__title">Митне оформлення</div>
+								<div class="item-why__text">
+									Ми беремо на себе всі процедури, пов'язані з митним очищенням вантажів
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__team team-home bg">
+				<div class="team-home__container">
+					<div class="text-block">
+						<div class="text-block__label">Наша команда</div>
+						<h2 class="text-block__title">Кожен наш співробітник є спеціалістом у своїй сфері</h2>
+					</div>
+					<div class="team-home__items">
+						<div class="item-team">
+							<div class="item-team__user-icon">
+								<picture><source srcset="img/home/team/01.webp" type="image/webp"><img class="ibg" src="img/home/team/01.jpg" alt="Image"></picture>
+							</div>
+							<div class="item-team__info">
+								<div class="item-team__name">Олександр Липович</div>
+								<div class="item-team__category">Бухгалтер, фінансист</div>
+							</div>
+						</div>
+						<div class="item-team">
+							<div class="item-team__user-icon">
+								<picture><source srcset="img/home/team/02.webp" type="image/webp"><img class="ibg" src="img/home/team/02.jpg" alt="Image"></picture>
+							</div>
+							<div class="item-team__info">
+								<div class="item-team__name">Олександр Липович</div>
+								<div class="item-team__category">Бухгалтер, фінансист</div>
+							</div>
+						</div>
+						<div class="item-team">
+							<div class="item-team__user-icon">
+								<picture><source srcset="img/home/team/03.webp" type="image/webp"><img class="ibg" src="img/home/team/03.jpg" alt="Image"></picture>
+							</div>
+							<div class="item-team__info">
+								<div class="item-team__name">Олександр Липович</div>
+								<div class="item-team__category">Бухгалтер, фінансист</div>
+							</div>
+						</div>
+						<div class="item-team">
+							<div class="item-team__user-icon">
+								<picture><source srcset="img/home/team/04.webp" type="image/webp"><img class="ibg" src="img/home/team/04.jpg" alt="Image"></picture>
+							</div>
+							<div class="item-team__info">
+								<div class="item-team__name">Олександр Липович</div>
+								<div class="item-team__category">Бухгалтер, фінансист</div>
+							</div>
+						</div>
+						<div class="item-team">
+							<div class="item-team__user-icon">
+								<picture><source srcset="img/home/team/05.webp" type="image/webp"><img class="ibg" src="img/home/team/05.jpg" alt="Image"></picture>
+							</div>
+							<div class="item-team__info">
+								<div class="item-team__name">Олександр Липович</div>
+								<div class="item-team__category">Бухгалтер, фінансист</div>
+							</div>
+						</div>
+						<div class="item-team">
+							<div class="item-team__user-icon">
+								<picture><source srcset="img/home/team/06.webp" type="image/webp"><img class="ibg" src="img/home/team/06.jpg" alt="Image"></picture>
+							</div>
+							<div class="item-team__info">
+								<div class="item-team__name">Олександр Липович</div>
+								<div class="item-team__category">Бухгалтер, фінансист</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__gallery gallery-home bg">
+				<div class="gallery-home__container">
+					<div class="gallery-home__header">
+						<div class="text-block">
+							<div class="text-block__label">Фото грузів</div>
+							<h2 class="text-block__title">Наш підхід до перевезень</h2>
+						</div>
+						<div class="gallery-slider__nav navigation-btn">
+							<button type="button" class="gallery-slider__prev navigation-btn__prev">
+								<svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13 5L1 5M1 5L5 9M1 5L5 1" stroke="#14171F" stroke-width="1.25" stroke-linecap="round" />
+								</svg>
+							</button>
+							<button type="button" class="gallery-slider__next navigation-btn__next">
+								<svg viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 5L13 5M13 5L9 9M13 5L9 1" stroke="#14171F" stroke-width="1.25" stroke-linecap="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="gallery-slider swiper">
+						<div class="gallery-slider__wrapper swiper-wrapper">
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/01.webp" type="image/webp"><img class="ibg" src="img/home/gallery/01.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/02.webp" type="image/webp"><img class="ibg" src="img/home/gallery/02.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/03.webp" type="image/webp"><img class="ibg" src="img/home/gallery/03.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/04.webp" type="image/webp"><img class="ibg" src="img/home/gallery/04.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/01.webp" type="image/webp"><img class="ibg" src="img/home/gallery/01.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/02.webp" type="image/webp"><img class="ibg" src="img/home/gallery/02.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/03.webp" type="image/webp"><img class="ibg" src="img/home/gallery/03.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/04.webp" type="image/webp"><img class="ibg" src="img/home/gallery/04.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/01.webp" type="image/webp"><img class="ibg" src="img/home/gallery/01.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/02.webp" type="image/webp"><img class="ibg" src="img/home/gallery/02.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/03.webp" type="image/webp"><img class="ibg" src="img/home/gallery/03.jpg" alt="Image"></picture>
+							</div>
+							<div class="gallery-slider__slide swiper-slide">
+								<picture><source srcset="img/home/gallery/04.webp" type="image/webp"><img class="ibg" src="img/home/gallery/04.jpg" alt="Image"></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__tarrifs tarrifs-home bg">
+				<div class="tarrifs-home__container">
+					<div class="tarrifs-home__header">
+						<div class="text-block">
+							<div class="text-block__label">Наші тарифи</div>
+							<h2 class="text-block__title">Стоимость услуг зависит от нескольких ключевых факторов</h2>
+						</div>
+						<a data-da=".tarrifs-home__items, 991.98" href="#" class="button tarrifs-home__link">Отримати консультацію</a>
+					</div>
+					<div class="tarrifs-home__items">
+						<div class="item-tarrifs">
+							<div class="item-tarrifs__body">
+								<div class="item-tarrifs__title">Вага та щільність вантажу</div>
+								<div class="item-tarrifs__subtitle">
+									Залежність вартості від маси та обсягу вантажу дозволяє оптимізувати витрати на логістику
+								</div>
+							</div>
+						</div>
+						<div class="item-tarrifs">
+							<div class="item-tarrifs__body">
+								<div class="item-tarrifs__title">Термін доставки</div>
+								<div class="item-tarrifs__subtitle">
+									Час, за який потрібно доставити вантаж, впливає на підсумкову вартість
+								</div>
+							</div>
+						</div>
+						<div class="item-tarrifs">
+							<div class="item-tarrifs__body">
+								<div class="item-tarrifs__title">Номенклатура товару</div>
+								<div class="item-tarrifs__subtitle">
+									Тип та характеристики товару можуть вплинути на вимоги до транспортування та, відповідно, на тариф
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-home__contacts contacts-home bg">
+				<div class="contacts-home__container">
+					<div class="text-block">
+						<div class="text-block__label">Наші контакти</div>
+						<h2 class="text-block__title">Ви можете зв'язатися з нами будь-яким зручним для вас способом</h2>
+					</div>
+					<div class="contacts-home__info">
+						<div class="info-contacts">
+							<div class="info-contacts__title">Контакти</div>
+							<div class="info-contacts__items">
+								<a href="tel:380000000000" class="info-contacts__text">+380000000000</a>
+								<a href="mailto:test@gmail.com" class="info-contacts__text">test@gmail.com</a>
+								<div class="info-contacts__social">
+									<a href="#" class="info-contacts__link info-contacts__link--telegram _icon-telegram"></a>
+									<a href="#" class="info-contacts__link info-contacts__link--whatsapp _icon-whatsapp"></a>
+								</div>
+							</div>
+						</div>
+						<div class="info-contacts">
+							<div class="info-contacts__title">Адреса</div>
+							<div class="info-contacts__items">
+								<div class="info-contacts__text">
+									м.Ужгород, вул.Корзо, 20
+								</div>
+							</div>
+						</div>
+						<div class="info-contacts">
+							<div class="info-contacts__title">Режим роботи</div>
+							<div class="info-contacts__items">
+								<div class="info-contacts__text">
+									З 7:00 до 19:00
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-home__map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.276025873089!2d22.296627976836287!3d48.6236998171933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b6b33c540d%3A0xe5019647c528860a!2z0LLRg9C70LjRhtGPINCa0L7RgNC30L4sIDIwLCDQo9C20LPQvtGA0L7QtCwg0JfQsNC60LDRgNC_0LDRgtGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA4ODAwMA!5e0!3m2!1suk!2sua!4v1708521460143!5m2!1suk!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div data-spollers="767.98, max" data-one-spoller class="item-footer">
+					<div class="item-footer__logo-mobile"></div>
+					<details class="item-footer__item">
+						<summary class="item-footer__title">
+							<a data-da=".item-footer__logo-mobile, 767.98" href="#" class="item-footer__logo">
+								<svg width="117" height="21" viewBox="0 0 117 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.18164 6.4628V0H8.42957V6.4628H6.18164Z" fill="white" />
+									<path d="M12.6444 8.43011L0.561768 13.7689V8.43011L11.8014 2.5293L18.8262 2.81029V6.46317L12.6444 8.43011Z" fill="white" />
+									<path d="M0.561983 18.2648L21.0743 19.6697C17.7025 14.2747 21.5427 8.43006 23.8843 6.18213C15.1173 8.43006 4.30853 13.4879 0 15.7358L0.561983 18.2648Z" fill="white" />
+									<path d="M30.5015 20.0109V6.52729H32.9117V12.4945H32.949L38.685 6.52729H41.5997L34.724 13.5464L34.7427 12.4754L42.0481 20.0109H39.04L32.949 13.7759H32.9117V20.0109H30.5015Z" fill="white" />
+									<path d="M45.9764 20.2021C44.818 20.2021 43.9523 19.877 43.3793 19.2267C42.8063 18.5765 42.5198 17.5819 42.5198 16.2431V10.3524H44.8553V16.224C44.8553 16.938 44.9986 17.4672 45.2851 17.8114C45.5715 18.143 46.0075 18.3087 46.5929 18.3087C47.2531 18.3087 47.7887 18.0792 48.1997 17.6202C48.6232 17.1612 48.835 16.5555 48.835 15.8032V10.3524H51.1705V20.0109H48.891V18.0409H49.1526C48.8786 18.7295 48.4613 19.265 47.9008 19.6475C47.3527 20.0173 46.7113 20.2021 45.9764 20.2021Z" fill="white" />
+									<path d="M53.7059 20.0109V12.7623C53.7059 12.367 53.6935 11.9654 53.6686 11.5573C53.6436 11.1493 53.6063 10.7477 53.5565 10.3524H55.8172L56.004 12.265H55.7798C56.0788 11.5892 56.521 11.0728 57.1064 10.7158C57.6918 10.346 58.3707 10.1612 59.1429 10.1612C60.2515 10.1612 61.086 10.4799 61.6466 11.1174C62.2071 11.755 62.4873 12.7495 62.4873 14.1011V20.0109H60.1519V14.2158C60.1519 13.438 60.0024 12.8834 59.7034 12.5519C59.417 12.2076 58.981 12.0355 58.3956 12.0355C57.6731 12.0355 57.1002 12.265 56.6767 12.724C56.2532 13.183 56.0414 13.795 56.0414 14.5601V20.0109H53.7059Z" fill="white" />
+									<path d="M63.5437 20.0109L68.962 12.6284V13.6803L63.7305 6.52729H66.5518L70.3446 11.9016H69.5786L73.3527 6.52729H76.1927L70.9425 13.6803V12.6284L76.3795 20.0109H73.5396L69.5412 14.3879H70.3633L66.365 20.0109H63.5437Z" fill="white" />
+									<path d="M77.4986 20.0109V10.3524H79.8341V20.0109H77.4986ZM77.3679 8.53548V6.20215H79.9649V8.53548H77.3679Z" fill="white" />
+									<path d="M82.3703 20.0109V12.7623C82.3703 12.367 82.3578 11.9654 82.3329 11.5573C82.308 11.1493 82.2707 10.7477 82.2208 10.3524H84.4816L84.6684 12.265H84.4442C84.7432 11.5892 85.1853 11.0728 85.7708 10.7158C86.3562 10.346 87.035 10.1612 87.8073 10.1612C88.9159 10.1612 89.7504 10.4799 90.3109 11.1174C90.8715 11.755 91.1517 12.7495 91.1517 14.1011V20.0109H88.8162V14.2158C88.8162 13.438 88.6668 12.8834 88.3678 12.5519C88.0813 12.2076 87.6454 12.0355 87.0599 12.0355C86.3375 12.0355 85.7645 12.265 85.341 12.724C84.9175 13.183 84.7058 13.795 84.7058 14.5601V20.0109H82.3703Z" fill="white" />
+									<path d="M100.167 20.2021C98.6852 20.2021 97.4396 19.9216 96.4306 19.3606C95.4217 18.7996 94.6619 18.0027 94.1512 16.9699C93.6405 15.9371 93.3852 14.7131 93.3852 13.2978C93.3852 11.8697 93.6592 10.6393 94.2073 9.60652C94.7553 8.56098 95.54 7.7577 96.5614 7.19668C97.5953 6.62291 98.8346 6.33603 100.28 6.33603C101.239 6.33603 102.079 6.46991 102.802 6.73767C103.524 6.99268 104.16 7.36882 104.708 7.86608L103.904 9.77865C103.506 9.45989 103.126 9.20488 102.764 9.01362C102.403 8.82237 102.03 8.68849 101.643 8.61199C101.257 8.52273 100.809 8.47811 100.298 8.47811C98.8533 8.47811 97.7572 8.89887 97.0098 9.7404C96.2749 10.5692 95.9075 11.7613 95.9075 13.3169C95.9075 14.8725 96.2562 16.0583 96.9538 16.8743C97.6638 17.6903 98.7723 18.0983 100.28 18.0983C100.79 18.0983 101.301 18.0473 101.812 17.9453C102.335 17.8433 102.845 17.6967 103.344 17.5054L102.895 18.5382V14.5027H99.8124V12.7049H104.894V19.1885C104.284 19.5072 103.555 19.7559 102.708 19.9344C101.861 20.1129 101.014 20.2021 100.167 20.2021Z" fill="white" />
+									<path d="M111.718 20.2021C110.747 20.2021 109.906 19.9981 109.196 19.5901C108.486 19.1821 107.932 18.602 107.533 17.8497C107.147 17.0974 106.954 16.2049 106.954 15.1721C106.954 14.1393 107.147 13.2532 107.533 12.5136C107.932 11.7613 108.486 11.1812 109.196 10.7732C109.906 10.3652 110.747 10.1612 111.718 10.1612C112.69 10.1612 113.531 10.3652 114.241 10.7732C114.963 11.1812 115.517 11.7613 115.904 12.5136C116.302 13.2532 116.501 14.1393 116.501 15.1721C116.501 16.2049 116.302 17.0974 115.904 17.8497C115.517 18.602 114.963 19.1821 114.241 19.5901C113.531 19.9981 112.69 20.2021 111.718 20.2021ZM111.718 18.3661C112.453 18.3661 113.039 18.1047 113.475 17.5819C113.911 17.0464 114.129 16.2431 114.129 15.1721C114.129 14.1011 113.911 13.3042 113.475 12.7814C113.039 12.2586 112.453 11.9972 111.718 11.9972C110.984 11.9972 110.398 12.2586 109.962 12.7814C109.526 13.3042 109.308 14.1011 109.308 15.1721C109.308 16.2431 109.526 17.0464 109.962 17.5819C110.398 18.1047 110.984 18.3661 111.718 18.3661Z" fill="white" />
+								</svg>
+							</a>
+							<span>Курс</span>
+						</summary>
+						<div class="item-footer__sub-items sub-item-footer">
+							<div class="sub-item-footer__text">1 € = 41,75 ₴</div>
+							<div class="sub-item-footer__text">1 $ = 38,63 ₴</div>
+						</div>
+					</details>
+					<details class="item-footer__item">
+						<summary class="item-footer__title">Доставка</summary>
+						<div class="item-footer__sub-items sub-item-footer">
+							<a href="#" class="sub-item-footer__link">Доставка по морю</a>
+							<a href="#" class="sub-item-footer__link">Доставка поїзом</a>
+							<a href="#" class="sub-item-footer__link">Доставка авіатранспортом</a>
+							<a href="#" class="sub-item-footer__link">Доставка вантажівкою</a>
+						</div>
+					</details>
+					<details class="item-footer__item">
+						<summary class="item-footer__title">Послуги</summary>
+						<div class="item-footer__sub-items sub-item-footer">
+							<a href="#" class="sub-item-footer__link">Викуп товару</a>
+							<a href="#" class="sub-item-footer__link">Пошук поставщика</a>
+							<a href="#" class="sub-item-footer__link">Інспекція фабрики постачальника</a>
+							<a href="#" class="sub-item-footer__link">Страхування товару</a>
+							<a href="#" class="sub-item-footer__link">Митне оформлення</a>
+						</div>
+					</details>
+					<details class="item-footer__item">
+						<summary class="item-footer__title">Інформація</summary>
+						<div class="item-footer__sub-items sub-item-footer">
+							<a href="#" class="sub-item-footer__link">Відгуки</a>
+							<a href="#" class="sub-item-footer__link">Вимоги до вантажу</a>
+							<a href="#" class="sub-item-footer__link">Договір-оферта</a>
+							<a href="#" class="sub-item-footer__link">Як укласти договір</a>
+							<a href="#" class="sub-item-footer__link">Способи оплати послуг</a>
+							<a href="#" class="sub-item-footer__link">Блог</a>
+						</div>
+					</details>
+					<details class="item-footer__item">
+						<summary class="item-footer__title">Контакти</summary>
+						<div class="item-footer__sub-items sub-item-footer">
+							<a href="tel:380000000000" class="sub-item-footer__link">+380000000000</a>
+							<a href="mailto:test@gmail.com" class="sub-item-footer__link">test@gmail.com</a>
+							<div class="sub-item-footer__text">м.Ужгород, вул.Корзо, 20</div>
+							<div class="sub-item-footer__social">
+								<a href="#" class="sub-item-footer__telegram _icon-telegram"></a>
+								<a href="#" class="sub-item-footer__whatsapp _icon-whatsapp"></a>
+							</div>
+						</div>
+					</details>
+					<details class="item-footer__item">
+						<summary class="item-footer__title">Режим роботи</summary>
+						<div class="item-footer__sub-items sub-item-footer">
+							<div class="sub-item-footer__text">З 7:00 до 19:00</div>
+						</div>
+					</details>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240221185104"></script>
+</body>
+
+</html>
