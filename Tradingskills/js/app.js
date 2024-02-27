@@ -1,5 +1,6 @@
 (() => {
     "use strict";
+    const modules_flsModules = {};
     function isWebp() {
         function testWebP(callback) {
             let webP = new Image;
@@ -13,6 +14,110 @@
             document.documentElement.classList.add(className);
         }));
     }
+    function functions_FLS(message) {
+        setTimeout((() => {
+            if (window.FLS) console.log(message);
+        }), 0);
+    }
+    function uniqArray(array) {
+        return array.filter((function(item, index, self) {
+            return self.indexOf(item) === index;
+        }));
+    }
+    class ScrollWatcher {
+        constructor(props) {
+            let defaultConfig = {
+                logging: true
+            };
+            this.config = Object.assign(defaultConfig, props);
+            this.observer;
+            !document.documentElement.classList.contains("watcher") ? this.scrollWatcherRun() : null;
+        }
+        scrollWatcherUpdate() {
+            this.scrollWatcherRun();
+        }
+        scrollWatcherRun() {
+            document.documentElement.classList.add("watcher");
+            this.scrollWatcherConstructor(document.querySelectorAll("[data-watch]"));
+        }
+        scrollWatcherConstructor(items) {
+            if (items.length) {
+                this.scrollWatcherLogging(`Прокинувся, стежу за об'єктами (${items.length})...`);
+                let uniqParams = uniqArray(Array.from(items).map((function(item) {
+                    return `${item.dataset.watchRoot ? item.dataset.watchRoot : null}|${item.dataset.watchMargin ? item.dataset.watchMargin : "0px"}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`;
+                })));
+                uniqParams.forEach((uniqParam => {
+                    let uniqParamArray = uniqParam.split("|");
+                    let paramsWatch = {
+                        root: uniqParamArray[0],
+                        margin: uniqParamArray[1],
+                        threshold: uniqParamArray[2]
+                    };
+                    let groupItems = Array.from(items).filter((function(item) {
+                        let watchRoot = item.dataset.watchRoot ? item.dataset.watchRoot : null;
+                        let watchMargin = item.dataset.watchMargin ? item.dataset.watchMargin : "0px";
+                        let watchThreshold = item.dataset.watchThreshold ? item.dataset.watchThreshold : 0;
+                        if (String(watchRoot) === paramsWatch.root && String(watchMargin) === paramsWatch.margin && String(watchThreshold) === paramsWatch.threshold) return item;
+                    }));
+                    let configWatcher = this.getScrollWatcherConfig(paramsWatch);
+                    this.scrollWatcherInit(groupItems, configWatcher);
+                }));
+            } else this.scrollWatcherLogging("Сплю, немає об'єктів для стеження. ZzzZZzz");
+        }
+        getScrollWatcherConfig(paramsWatch) {
+            let configWatcher = {};
+            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... батьківського об'єкта ${paramsWatch.root} немає на сторінці`);
+            configWatcher.rootMargin = paramsWatch.margin;
+            if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
+                this.scrollWatcherLogging(`йой, налаштування data-watch-margin потрібно задавати в PX або %`);
+                return;
+            }
+            if (paramsWatch.threshold === "prx") {
+                paramsWatch.threshold = [];
+                for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
+            } else paramsWatch.threshold = paramsWatch.threshold.split(",");
+            configWatcher.threshold = paramsWatch.threshold;
+            return configWatcher;
+        }
+        scrollWatcherCreate(configWatcher) {
+            this.observer = new IntersectionObserver(((entries, observer) => {
+                entries.forEach((entry => {
+                    this.scrollWatcherCallback(entry, observer);
+                }));
+            }), configWatcher);
+        }
+        scrollWatcherInit(items, configWatcher) {
+            this.scrollWatcherCreate(configWatcher);
+            items.forEach((item => this.observer.observe(item)));
+        }
+        scrollWatcherIntersecting(entry, targetElement) {
+            if (entry.isIntersecting) {
+                !targetElement.classList.contains("_watcher-view") ? targetElement.classList.add("_watcher-view") : null;
+                this.scrollWatcherLogging(`Я бачу ${targetElement.classList}, додав клас _watcher-view`);
+            } else {
+                targetElement.classList.contains("_watcher-view") ? targetElement.classList.remove("_watcher-view") : null;
+                this.scrollWatcherLogging(`Я не бачу ${targetElement.classList}, прибрав клас _watcher-view`);
+            }
+        }
+        scrollWatcherOff(targetElement, observer) {
+            observer.unobserve(targetElement);
+            this.scrollWatcherLogging(`Я перестав стежити за ${targetElement.classList}`);
+        }
+        scrollWatcherLogging(message) {
+            this.config.logging ? functions_FLS(`[Спостерігач]: ${message}`) : null;
+        }
+        scrollWatcherCallback(entry, observer) {
+            const targetElement = entry.target;
+            this.scrollWatcherIntersecting(entry, targetElement);
+            targetElement.hasAttribute("data-watch-once") && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
+            document.dispatchEvent(new CustomEvent("watcherCallback", {
+                detail: {
+                    entry
+                }
+            }));
+        }
+    }
+    modules_flsModules.watcher = new ScrollWatcher({});
     let addWindowScrollEvent = false;
     setTimeout((() => {
         if (addWindowScrollEvent) {
@@ -22,102 +127,65 @@
             }));
         }
     }), 0);
-    const mediaQuery = window.matchMedia("(min-width: 767.98px)");
-    const handleResize = gridItem => {
-        const itemServices = gridItem.querySelectorAll(".item-info");
-        if (mediaQuery.matches) {
-            if (itemServices.length % 2 !== 0) itemServices[itemServices.length - 1].classList.add("_full");
-        } else {
-            const fullItemServices = gridItem.querySelectorAll(".item-info._full");
-            if (fullItemServices.length > 0) fullItemServices[fullItemServices.length - 1].classList.remove("_full");
-        }
-    };
-    const gridItems = document.querySelectorAll(".grid-items");
-    gridItems.forEach((gridItem => {
-        const handleResizeDebounced = debounce((() => handleResize(gridItem)), 100);
-        window.addEventListener("resize", handleResizeDebounced);
-        handleResizeDebounced();
-    }));
-    function debounce(func, wait) {
-        let timeout;
-        return function() {
-            const context = this;
-            const args = arguments;
-            const later = function() {
-                timeout = null;
-                func.apply(context, args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
+    function processTextBlock(textBlock) {
+        const dataChar = textBlock.dataset.char.split(",").map(Number);
+        const content = textBlock.textContent;
+        textBlock.innerHTML = "";
+        content.split("").forEach(((char, i) => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            if (char === " ") {
+                const space = document.createTextNode(" ");
+                textBlock.appendChild(space);
+            } else {
+                textBlock.appendChild(span);
+                applyAnimation(span, dataChar, i);
+            }
+        }));
     }
-    const toRem = value => value / 16 + "rem";
-    const infoBlocks = document.querySelectorAll(".info-block");
-    infoBlocks.forEach(((infoBlock, index) => {
-        const imageBlock = infoBlock.querySelector(".info-block__image-block");
-        const img = imageBlock.querySelector(".rectangle");
-        const contentBlock = infoBlock.querySelector(".info-block__content");
-        if (index % 2 === 0) {
-            imageBlock.style.order = 1;
-            contentBlock.style.order = 2;
-            contentBlock.style.paddingRight = toRem(40);
-            img.style.bottom = toRem(-1);
-            img.style.left = toRem(-1);
-            img.style.transform = "rotate(90deg)";
-            img.style.position = "absolute";
-            const mediaQuery = window.matchMedia("(max-width: 991.98px)");
-            if (mediaQuery.matches) {
-                img.style.transform = "rotate(180deg)";
-                img.style.top = toRem(-1);
-                contentBlock.style.paddingRight = toRem(0);
-            }
-            mediaQuery.addListener((event => {
-                if (event.matches) {
-                    img.style.transform = "rotate(180deg)";
-                    img.style.top = toRem(-1);
-                    contentBlock.style.paddingRight = toRem(0);
-                } else {
-                    imageBlock.style.order = 1;
-                    contentBlock.style.order = 2;
-                    contentBlock.style.paddingRight = toRem(40);
-                    img.style.transform = "rotate(90deg)";
-                    img.style.left = toRem(-1);
-                    img.style.top = "auto";
-                }
-            }));
-        } else {
-            imageBlock.style.order = 2;
-            contentBlock.style.order = 1;
-            contentBlock.style.paddingLeft = toRem(40);
-            img.style.bottom = toRem(-1);
-            img.style.right = toRem(-1);
-            img.style.position = "absolute";
-            const mediaQuery = window.matchMedia("(max-width: 991.98px)");
-            if (mediaQuery.matches) {
-                imageBlock.style.order = 1;
-                contentBlock.style.order = 2;
-                img.style.transform = "rotate(-90deg)";
-                img.style.top = toRem(-1);
-                contentBlock.style.paddingLeft = toRem(0);
-            }
-            mediaQuery.addListener((event => {
-                if (event.matches) {
-                    imageBlock.style.order = 1;
-                    contentBlock.style.order = 2;
-                    img.style.transform = "rotate(-90deg)";
-                    img.style.top = toRem(-1);
-                    contentBlock.style.paddingLeft = toRem(0);
-                } else {
-                    imageBlock.style.order = 2;
-                    contentBlock.style.order = 1;
-                    contentBlock.style.paddingLeft = toRem(40);
-                    img.style.transform = "rotate(0deg)";
-                    img.style.right = toRem(-1);
-                    img.style.top = "auto";
-                }
-            }));
+    function applyAnimation(span, dataChar, i) {
+        if (dataChar.length > 0) {
+            const delayIncrement = dataChar[0] || 1e3;
+            const delay = delayIncrement + i * (dataChar[1] || 50);
+            span.style.transitionProperty = "transform, opacity";
+            span.style.transitionDelay = delay + "ms";
         }
-    }));
-    window["FLS"] = true;
+    }
+    document.querySelectorAll("[data-char]").forEach(processTextBlock);
+    function updateGridBlock() {
+        const mediaQuery = window.matchMedia("(min-width: 767.98px)");
+        const handleResize = gridItem => {
+            const itemServices = gridItem.querySelectorAll(".item-info");
+            if (mediaQuery.matches) {
+                const lastItem = itemServices[itemServices.length - 1];
+                if (lastItem) lastItem.classList.toggle("_full", itemServices.length % 2 !== 0);
+            } else {
+                const fullItemServices = gridItem.querySelectorAll(".item-info._full");
+                if (fullItemServices.length > 0) fullItemServices[fullItemServices.length - 1].classList.remove("_full");
+            }
+        };
+        const gridItems = document.querySelectorAll(".grid-items");
+        gridItems.forEach((gridItem => {
+            const handleResizeDebounced = debounce((() => handleResize(gridItem)), 100);
+            window.addEventListener("resize", handleResizeDebounced);
+            handleResizeDebounced();
+        }));
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                clearTimeout(timeout);
+                timeout = setTimeout(func, wait);
+            };
+        }
+    }
+    updateGridBlock();
+    function addOddEvenClasses() {
+        const infoBlocks = document.querySelectorAll(".info-block");
+        infoBlocks.forEach(((block, index) => {
+            if (index % 2 === 0) block.classList.add("odd"); else block.classList.add("pair");
+        }));
+    }
+    addOddEvenClasses();
+    window["FLS"] = false;
     isWebp();
 })();

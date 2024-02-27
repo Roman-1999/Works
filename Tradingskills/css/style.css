@@ -211,21 +211,73 @@ textarea.input {
   grid-template-columns: repeat(2,1fr)
 }
 .info-block__container {
+  opacity: 0;
   display: grid;
   grid-template-columns: repeat(2,1fr)
 }
 .info-block__image-block {
-  position: relative
+  position: relative;
+  opacity: 0
 }
 .info-block__image-block .rectangle {
   position: absolute
+}
+.info-block__content {
+  opacity: 0
 }
 .info-block__title {
   padding-left: 1.25rem;
   padding-right: 1.25rem
 }
+.info-block__title span {
+  display: inline-block;
+  -webkit-transform: translate(0,10%) rotate(10deg);
+  transform: translate(0,10%) rotate(10deg);
+  opacity: 0
+}
 .info-block__items {
   display: grid
+}
+.info-block.odd .rectangle {
+  bottom: -.0625rem;
+  left: -.0625rem;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.info-block.pair .rectangle {
+  bottom: -.0625rem;
+  right: -.0625rem
+}
+.info-block .item-info {
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+  transform: translateY(30%)
+}
+.info-block._watcher-view .info-block__container {
+  opacity: 1;
+  transition-duration: 1s;
+  transition-delay: 1s
+}
+.info-block._watcher-view .info-block__content {
+  opacity: 1
+}
+.info-block._watcher-view .info-block__title span {
+  opacity: 1;
+  -webkit-transform: translate(0,0) rotate(.02deg);
+  transform: translate(0,0) rotate(.02deg);
+  transition-duration: 1.5s
+}
+.info-block._watcher-view .info-block__image-block {
+  opacity: 1;
+  transition-duration: 1s;
+  transition-delay: 2s
+}
+.info-block._watcher-view .item-info {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition-duration: 1s;
+  transition-delay: 2.3s
 }
 .item-info__title--red {
   color: #ff4a4a
@@ -275,23 +327,113 @@ textarea.input {
   flex-direction: column;
   gap: 1rem
 }
+.main-page__logo {
+  flex: 1 1 100%
+}
+.main-page__logo svg {
+  opacity: 0
+}
+.main-page__logo._watcher-view svg {
+  opacity: 1;
+  transition-duration: 1s;
+  transition-delay: 1s
+}
 .main-page__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 1 1 100%;
-  max-width: 40rem
+  max-width: 39.375rem
 }
 .main-page__title span {
-  color: #377de5
+  display: inline-block;
+  -webkit-transform: translate(0,10%) rotate(10deg);
+  transform: translate(0,10%) rotate(10deg);
+  opacity: 0
+}
+.main-page__title._watcher-view span {
+  opacity: 1;
+  -webkit-transform: translate(0,0) rotate(.02deg);
+  transform: translate(0,0) rotate(.02deg);
+  transition-duration: 1.5s
 }
 .main-page__image-block {
-  position: relative
+  position: relative;
+  opacity: 0
 }
 .main-page__image-block .rectangle {
   position: absolute;
-  bottom: 0;
+  bottom: -.0625rem;
   right: -.0625rem
+}
+.main-page__image-block._watcher-view {
+  opacity: 1;
+  transition-duration: 2.5s;
+  transition-delay: 1.5s
+}
+.services-page__container .item-info {
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+  transform: translateY(30%)
+}
+.services-page__container .item-info._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition-duration: 1s;
+  transition-delay: 1s
+}
+.course-page__container .item-info {
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+  transform: translateY(30%)
+}
+.course-page__container .item-info._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition-duration: 1s;
+  transition-delay: 1.5s
+}
+.course-page__title span {
+  display: inline-block;
+  -webkit-transform: translate(0,10%) rotate(10deg);
+  transform: translate(0,10%) rotate(10deg);
+  opacity: 0
+}
+.course-page__title._watcher-view span {
+  opacity: 1;
+  -webkit-transform: translate(0,0) rotate(.02deg);
+  transform: translate(0,0) rotate(.02deg);
+  transition-duration: 1.5s
+}
+.enrollment-page__container .item-info {
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+  transform: translateY(30%)
+}
+.enrollment-page__container .item-info._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition-duration: 1s;
+  transition-delay: 1.5s
+}
+.enrollment-page__title span {
+  display: inline-block;
+  -webkit-transform: translate(0,10%) rotate(10deg);
+  transform: translate(0,10%) rotate(10deg);
+  opacity: 0
+}
+.enrollment-page__title._watcher-view span {
+  opacity: 1;
+  -webkit-transform: translate(0,0) rotate(.02deg);
+  transform: translate(0,0) rotate(.02deg);
+  transition-duration: 1.5s
+}
+.form-page {
+  opacity: 0
+}
+.form-page._watcher-view {
+  opacity: 1;
+  transition-delay: .5s;
+  transition-duration: 1.5s
 }
 @media (min-width:61.99875em) {
   .info-block__image-block .image {
@@ -304,6 +446,20 @@ textarea.input {
   }
   .info-block__items .item-info {
     min-height: 26.25rem
+  }
+  .info-block.odd .info-block__image-block {
+    order: 1
+  }
+  .info-block.odd .info-block__content {
+    order: 2;
+    padding-right: 2.5rem
+  }
+  .info-block.pair .info-block__image-block {
+    order: 2
+  }
+  .info-block.pair .info-block__content {
+    order: 1;
+    padding-left: 2.5rem
   }
   .main-page__image-block .image {
     position: absolute;
@@ -427,6 +583,9 @@ textarea.input {
   }
   .page {
     gap: 2.5rem
+  }
+  .page {
+    padding-top: 2.5rem
   }
   .course-page__body,
   .enrollment-page__body {
@@ -584,6 +743,9 @@ textarea.input {
   .page {
     gap: .625rem
   }
+  .page {
+    padding-top: .625rem
+  }
   .course-page__body,
   .enrollment-page__body {
     padding-top: .9375rem
@@ -625,7 +787,7 @@ textarea.input {
     width: 4.375rem
   }
   .main-page__image-block .rectangle {
-    height: 16.875rem
+    height: 4.375rem
   }
 }
 @media (max-width:61.99875em) {
@@ -639,6 +801,16 @@ textarea.input {
     aspect-ratio: 340/289;
     width: 100%
   }
+  .info-block.odd .rectangle {
+    top: -.0625rem;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+  .info-block.pair .rectangle {
+    top: -.0625rem;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+  }
   .main-page__container {
     grid-template-columns: auto
   }
@@ -648,6 +820,11 @@ textarea.input {
   .main-page__image-block {
     order: 1;
     aspect-ratio: 340/289
+  }
+  .main-page__image-block .rectangle {
+    top: -.0625rem;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
   }
 }
 @media (max-width:47.99875em) {
@@ -1029,6 +1206,16 @@ textarea.input {
       gap: calc(.625rem + 1.875 * (100vw - 20rem)/ 95)
     }
   }
+  @supports (padding-top:clamp(0.625rem ,0.2302631579rem + 1.9736842105vw ,2.5rem)) {
+    .page {
+      padding-top: clamp(.625rem ,.2302631579rem + 1.9736842105vw ,2.5rem)
+    }
+  }
+  @supports not (padding-top:clamp(0.625rem ,0.2302631579rem + 1.9736842105vw ,2.5rem)) {
+    .page {
+      padding-top: calc(.625rem + 1.875 * (100vw - 20rem)/ 95)
+    }
+  }
   @supports (padding-top:clamp(0.9375rem ,0.4769736842rem + 2.3026315789vw ,3.125rem)) {
     .course-page__body,
     .enrollment-page__body {
@@ -1153,14 +1340,14 @@ textarea.input {
       width: calc(4.375rem + 18.625 * (100vw - 20rem)/ 95)
     }
   }
-  @supports (height:clamp(16.875rem ,15.5855263158rem + 6.4473684211vw ,23rem)) {
+  @supports (height:clamp(4.375rem ,0.4539473684rem + 19.6052631579vw ,23rem)) {
     .main-page__image-block .rectangle {
-      height: clamp(16.875rem ,15.5855263158rem + 6.4473684211vw ,23rem)
+      height: clamp(4.375rem ,.4539473684rem + 19.6052631579vw ,23rem)
     }
   }
-  @supports not (height:clamp(16.875rem ,15.5855263158rem + 6.4473684211vw ,23rem)) {
+  @supports not (height:clamp(4.375rem ,0.4539473684rem + 19.6052631579vw ,23rem)) {
     .main-page__image-block .rectangle {
-      height: calc(16.875rem + 6.125 * (100vw - 20rem)/ 95)
+      height: calc(4.375rem + 18.625 * (100vw - 20rem)/ 95)
     }
   }
 }

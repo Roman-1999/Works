@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240226191454">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240227140606">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
 			<section class="page__main main-page">
 				<div class="main-page__container dbd">
 					<div class="main-page__conent">
-						<div class="main-page__logo">
+						<div data-watch data-watch-once class="main-page__logo">
 							<svg width="160" height="43" viewBox="0 0 160 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M87.7523 43C86.6697 43 85.6672 42.8337 84.745 42.501C83.8227 42.188 83.0408 41.689 82.3993 41.0042C81.7577 40.3194 81.3267 39.4486 81.1061 38.392H83.7526C83.913 38.979 84.2137 39.4486 84.6548 39.8008C85.0958 40.153 85.6071 40.3976 86.1885 40.5346C86.7699 40.6911 87.3413 40.7694 87.9027 40.7694C88.9853 40.7694 89.8575 40.5542 90.5191 40.1237C91.2007 39.7128 91.6919 39.1356 91.9927 38.392C92.2934 37.6681 92.4438 36.8365 92.4438 35.8973V33.7547C92.1029 34.3417 91.6518 34.8211 91.0905 35.1929C90.5291 35.5646 89.9176 35.8386 89.256 36.0147C88.5944 36.1712 87.9127 36.2495 87.211 36.2495C85.6071 36.2495 84.2939 35.9071 83.2714 35.2222C82.2489 34.5178 81.487 33.5786 80.9858 32.4046C80.5046 31.211 80.2641 29.8707 80.2641 28.3837C80.2641 26.8966 80.5147 25.5563 81.0159 24.3627C81.5171 23.1496 82.289 22.1908 83.3315 21.4864C84.3741 20.782 85.7073 20.4298 87.3313 20.4298C88.2535 20.4298 89.1858 20.5961 90.1281 20.9287C91.0704 21.2614 91.8423 21.7995 92.4438 22.543L92.5641 20.6059H95V35.956C95 37.4039 94.7293 38.6562 94.188 39.7128C93.6667 40.7694 92.8648 41.5814 91.7822 42.1488C90.7196 42.7163 89.3763 43 87.7523 43ZM87.5719 34.0482C88.6345 34.0482 89.5266 33.7841 90.2484 33.2558C90.9702 32.7275 91.5215 32.0231 91.9024 31.1426C92.2834 30.2621 92.4738 29.3033 92.4738 28.2663C92.4738 27.1901 92.2834 26.2313 91.9024 25.3899C91.5416 24.5486 91.0002 23.8833 90.2785 23.3941C89.5567 22.905 88.6445 22.6604 87.5418 22.6604C86.399 22.6604 85.4768 22.9148 84.7751 23.4235C84.0934 23.9322 83.5922 24.6171 83.2714 25.478C82.9707 26.3389 82.8203 27.2977 82.8203 28.3543C82.8203 29.45 82.9807 30.4284 83.3015 31.2893C83.6223 32.1503 84.1335 32.8253 84.8352 33.3145C85.5369 33.8036 86.4491 34.0482 87.5719 34.0482Z" fill="white" />
 								<path d="M63.3977 36.0734V20.6059H65.8638L65.9841 22.9539C66.3449 22.3865 66.8061 21.9169 67.3674 21.5451C67.9288 21.1733 68.5403 20.8994 69.2019 20.7233C69.8836 20.5276 70.5452 20.4298 71.1867 20.4298C72.7305 20.4298 73.9334 20.7429 74.7955 21.369C75.6777 21.9951 76.2992 22.8463 76.6601 23.9224C77.041 24.979 77.2315 26.1824 77.2315 27.5325V36.0734H74.6752V28.2076C74.6752 27.4836 74.6251 26.789 74.5249 26.1237C74.4447 25.4584 74.2642 24.8616 73.9836 24.3333C73.7229 23.805 73.342 23.3941 72.8408 23.1006C72.3395 22.7876 71.6679 22.631 70.8259 22.631C69.7833 22.631 68.8911 22.9148 68.1493 23.4822C67.4276 24.0496 66.8762 24.8127 66.4953 25.7715C66.1344 26.7303 65.954 27.8064 65.954 29V36.0734H63.3977Z" fill="white" />
@@ -35,11 +35,9 @@
 								<path d="M104.604 36C103.883 36 103.153 35.9307 102.412 35.7922C101.692 35.6537 101.012 35.4163 100.371 35.08C99.7509 34.7436 99.2307 34.2885 98.8104 33.7148C98.3902 33.141 98.1201 32.4287 98 31.5779H100.581C100.781 32.1121 101.102 32.5474 101.542 32.8838C102.002 33.2003 102.512 33.4279 103.073 33.5664C103.653 33.7049 104.203 33.7741 104.724 33.7741C105.044 33.7741 105.414 33.7543 105.834 33.7148C106.254 33.6752 106.655 33.5862 107.035 33.4477C107.435 33.2894 107.755 33.0618 107.995 32.765C108.255 32.4683 108.386 32.0528 108.386 31.5185C108.386 31.1228 108.295 30.7964 108.115 30.5392C107.935 30.2819 107.685 30.0742 107.365 29.9159C107.045 29.7378 106.655 29.6092 106.194 29.5301C105.254 29.3322 104.243 29.1443 103.163 28.9662C102.102 28.7881 101.162 28.4518 100.341 27.9571C100.061 27.7791 99.801 27.5812 99.5608 27.3636C99.3407 27.1261 99.1506 26.8689 98.9905 26.5919C98.8304 26.2951 98.7004 25.9786 98.6003 25.6422C98.5203 25.2861 98.4803 24.9002 98.4803 24.4847C98.4803 23.7131 98.6303 23.0503 98.9305 22.4963C99.2507 21.9225 99.6909 21.4575 100.251 21.1014C100.811 20.7255 101.452 20.4485 102.172 20.2704C102.913 20.0923 103.703 20.0033 104.543 20.0033C105.584 20.0033 106.515 20.1715 107.335 20.5078C108.175 20.8244 108.866 21.2993 109.406 21.9324C109.946 22.5458 110.267 23.3075 110.367 24.2176H107.995C107.855 23.6439 107.475 23.1789 106.855 22.8228C106.234 22.4468 105.444 22.2589 104.483 22.2589C104.163 22.2589 103.803 22.2885 103.403 22.3479C103.003 22.3875 102.622 22.4864 102.262 22.6447C101.902 22.7832 101.602 23.0008 101.362 23.2976C101.122 23.5746 101.002 23.9505 101.002 24.4254C101.002 24.8607 101.112 25.2267 101.332 25.5235C101.572 25.8203 101.902 26.0577 102.322 26.2358C102.743 26.4138 103.223 26.5622 103.763 26.681C104.463 26.8195 105.234 26.9678 106.074 27.1261C106.915 27.2646 107.575 27.413 108.055 27.5713C108.696 27.7692 109.226 28.0462 109.646 28.4023C110.086 28.7584 110.407 29.1838 110.607 29.6785C110.827 30.1731 110.937 30.7469 110.937 31.3998C110.937 32.3298 110.747 33.0915 110.367 33.6851C110.006 34.2786 109.516 34.7436 108.896 35.08C108.275 35.4163 107.585 35.6537 106.825 35.7922C106.084 35.9307 105.344 36 104.604 36Z" fill="#377DE6" />
 							</svg>
 						</div>
-						<h1 class="main-page__title title">
-							Transform your trade view skills <span>a comprehensive 3 — month course</span>
-						</h1>
+						<h1 data-watch data-watch-once data-char="2200,25" class="main-page__title title">Transform your trade view skills a comprehensive 3 — month course</h1>
 					</div>
-					<div class="main-page__image-block">
+					<div data-watch data-watch-once class="main-page__image-block">
 						<picture><source srcset="img/main.webp" type="image/webp"><img class="ibg image" src="img/main.jpg" alt="Image"></picture>
 						<picture><source srcset="img/rectangle.webp" type="image/webp"><img class="ibg rectangle" src="img/rectangle.png" alt="Image"></picture>
 					</div>
@@ -48,21 +46,21 @@
 			<div class="page__services services-page">
 				<div class="services-page__container">
 					<div class="grid-items">
-						<div class="item-info dbd">
+						<div data-watch data-watch-once class="item-info dbd">
 							<div class="item-info__body">
 								<div class="item-info__text">
 									Embark on a transformative journey in financial trading with our expert-led 3-month course, incorporating key insights from tradeview
 								</div>
 							</div>
 						</div>
-						<div class="item-info dbd">
+						<div data-watch data-watch-once class="item-info dbd">
 							<div class="item-info__body">
 								<div class="item-info__text">
 									Designed for both beginners and seasoned investors, our program equips you with essential skills to effectively manage risks and devise personalized trading strategies using tradeview tools.
 								</div>
 							</div>
 						</div>
-						<div class="item-info drb">
+						<div data-watch data-watch-once class="item-info drb">
 							<div class="item-info__body">
 								<div class="item-info__title item-info__title--red title">
 									Professional training
@@ -72,7 +70,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item-info drb">
+						<div data-watch data-watch-once class="item-info drb">
 							<div class="item-info__body">
 								<div class="item-info__title item-info__title--red title">
 									Course duration
@@ -82,7 +80,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item-info drb">
+						<div data-watch data-watch-once class="item-info drb">
 							<div class="item-info__body">
 								<div class="item-info__title item-info__title--red title">
 									High rating
@@ -92,7 +90,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item-info drb">
+						<div data-watch data-watch-once class="item-info drb">
 							<div class="item-info__body">
 								<div class="item-info__title item-info__title--red title">
 									Practical assignments
@@ -102,7 +100,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="item-info drb">
+						<div data-watch data-watch-once class="item-info drb">
 							<div class="item-info__body">
 								<div class="item-info__title item-info__title--red title">
 									Bonus module
@@ -115,16 +113,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="info-block">
+			<div data-watch data-watch-once class="info-block">
 				<div class="info-block__container dbd">
-					<div class="info-block__image-block">
+					<div data-watch data-watch-once class="info-block__image-block">
 						<picture><source srcset="img/career.webp" type="image/webp"><img class="ibg ibg--top image" src="img/career.jpg" alt="Image"></picture>
 						<picture><source srcset="img/rectangle.webp" type="image/webp"><img class="ibg rectangle" src="img/rectangle.png" alt="Image"></picture>
 					</div>
 					<div class="info-block__content">
-						<div class="info-block__title title">Career opportunities</div>
+						<div data-char="1500, 50" class="info-block__title title">Career opportunities</div>
 						<div class="info-block__items">
-							<div class="item-info bd">
+							<div data-watch data-watch-once class="item-info bd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--blue title">
 										Aspiring professionals
@@ -134,7 +132,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item-info bd">
+							<div data-watch data-watch-once class="item-info bd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--blue title">
 										Beginner traders
@@ -151,9 +149,9 @@
 			<section class="page__course course-page">
 				<div class="course-page__container drb">
 					<div class="course-page__body">
-						<h2 class="course-page__title title">Why our course</h2>
+						<h2 data-watch data-watch-once data-char="500,50" class="course-page__title title">Why our course</h2>
 						<div class="grid-items">
-							<div class="item-info drd">
+							<div data-watch data-watch-once class="item-info drd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--red title">
 										Current market relevance
@@ -163,7 +161,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item-info drd">
+							<div data-watch data-watch-once class="item-info drd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--red title">
 										Comprehensive curriculum
@@ -173,7 +171,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item-info drd">
+							<div data-watch data-watch-once class="item-info drd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--red title">
 										Capstone project
@@ -187,16 +185,16 @@
 					</div>
 				</div>
 			</section>
-			<div class="info-block">
+			<div data-watch data-watch-once class="info-block">
 				<div class="info-block__container dbd">
-					<div class="info-block__image-block">
+					<div data-watch data-watch-once class="info-block__image-block">
 						<picture><source srcset="img/course.webp" type="image/webp"><img class="ibg ibg--top image" src="img/course.jpg" alt="Image"></picture>
 						<picture><source srcset="img/rectangle.webp" type="image/webp"><img class="ibg rectangle" src="img/rectangle.png" alt="Image"></picture>
 					</div>
 					<div class="info-block__content">
-						<div class="info-block__title title">Course benefits</div>
+						<div data-char="1500, 50" class="info-block__title title">Course benefits</div>
 						<div class="info-block__items">
-							<div class="item-info bd">
+							<div data-watch data-watch-once class="item-info bd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--blue title">
 										Income growth
@@ -206,7 +204,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item-info bd">
+							<div data-watch data-watch-once class="item-info bd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--blue title">
 										Flexible schedule
@@ -216,7 +214,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item-info bd">
+							<div data-watch data-watch-once class="item-info bd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--blue title">
 										Financial independence
@@ -233,9 +231,9 @@
 			<section class="page__enrollment enrollment-page">
 				<div class="enrollment-page__container drb">
 					<div class="enrollment-page__body">
-						<h2 class="enrollment-page__title title">Enrollment process</h2>
+						<h2 data-watch data-watch-once data-char="500,50" class="enrollment-page__title title">Enrollment process</h2>
 						<div class="grid-items">
-							<div class="item-info drd">
+							<div data-watch data-watch-once class="item-info drd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--red title">
 										Course fee
@@ -245,7 +243,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item-info drd">
+							<div data-watch data-watch-once class="item-info drd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--red title">
 										Easy registration
@@ -259,16 +257,16 @@
 					</div>
 				</div>
 			</section>
-			<div class="info-block">
+			<div data-watch data-watch-once class="info-block">
 				<div class="info-block__container dbd">
-					<div class="info-block__image-block">
+					<div data-watch data-watch-once class="info-block__image-block">
 						<picture><source srcset="img/conctact.webp" type="image/webp"><img class="ibg ibg--top image" src="img/conctact.jpg" alt="Image"></picture>
 						<picture><source srcset="img/rectangle.webp" type="image/webp"><img class="ibg rectangle" src="img/rectangle.png" alt="Image"></picture>
 					</div>
 					<div class="info-block__content">
-						<div class="info-block__title title">Contact us</div>
+						<div data-char="1500, 50" class="info-block__title title">Contact us</div>
 						<div class="info-block__items">
-							<div class="item-info bd">
+							<div data-watch data-watch-once class="item-info bd">
 								<div class="item-info__body">
 									<div class="item-info__title item-info__title--blue title">
 										Address
@@ -306,7 +304,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="page__form form-page">
+			<div data-watch data-watch-once class="page__form form-page">
 				<div class="form-page__container">
 					<form action="" class="form dbd">
 						<div class="form__title title">Submit Enrollment Info</div>
@@ -349,7 +347,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240226191454"></script>
+	<script src="js/app.min.js?_v=20240227140606"></script>
 </body>
 
 </html>
