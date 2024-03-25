@@ -178,7 +178,8 @@ h6 {
   font-weight: 500;
   font-size: .875rem;
   text-transform: uppercase;
-  color: rgba(15,15,15,.6)
+  color: rgba(15,15,15,.6);
+  min-height: .875rem
 }
 .item-city-form__list {
   position: absolute;
@@ -187,6 +188,7 @@ h6 {
   left: 0;
   opacity: 0;
   transition: opacity .8s;
+  z-index: 2;
   padding: .5rem;
   display: flex;
   flex-direction: column;
@@ -262,7 +264,8 @@ textarea {
   -webkit-appearance: none;
   appearance: none
 }
-.input {
+.input,
+.input-date {
   border-radius: 0!important;
   width: 100%;
   display: block;
@@ -270,7 +273,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase
 }
-.input--date {
+.input-date {
   font-size: 1.125rem
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
