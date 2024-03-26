@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240325182235">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240326171354">
 	<link rel="shortcut icon" href="img/logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +14,54 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="40" class="header">
 			<div class="header__container">
+				<a href="" class="header__logo">
+					<img src="img/logo.svg" alt="">
+					<span>AIR</span>
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-goto-header data-goto=".page__main" href="#" class="menu__link">Home</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__form" href="#" class="menu__link">Booking</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__air-classes" href="#" class="menu__link">Private Jet</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__specifications" href="#" class="menu__link">Specification</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__charters" href="#" class="menu__link">Luxury Charters</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__membership" href="#" class="menu__link">Membership</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button type="button" class="header__auth">Log In</button>
+				<button type="button" class="menu__icon icon-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 200 200">
+						<g stroke-width="6.5" stroke-linecap="round">
+							<path d="M72 82.286h28.75" fill="#009100" fill-rule="evenodd" stroke="#fff" />
+							<path d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554" fill="none" stroke="#fff" />
+							<path d="M72 125.143h28.75" fill="#009100" fill-rule="evenodd" stroke="#fff" />
+							<path d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554" fill="none" stroke="#fff" />
+							<path d="M100.75 82.286h28.75" fill="#009100" fill-rule="evenodd" stroke="#fff" />
+							<path d="M100.75 125.143h28.75" fill="#009100" fill-rule="evenodd" stroke="#fff" />
+						</g>
+					</svg>
+				</button>
 			</div>
 		</header>
 		<main class="page">
-			<section class="pahe__main main">
+			<section class="page__main main">
 				<div class="main__image">
 					<picture><source srcset="img/main/main.webp" type="image/webp"><img class="ibg ibg--bottom ibg--right" src="img/main/main.png" alt="Image"></picture>
 				</div>
 				<div class="main__bg"></div>
 				<div class="main__container">
-					<div class="main__body">
-						<h1 class="main__title">Enjoy <span>Reserved</span> Overhead bin space</h1>
-						<div class="main__window">
-						</div>
+					<h1 data-watch data-watch-once class="main__title">Enjoy <span>Reserved</span> Overhead bin space</h1>
+					<div class="main__window">
 					</div>
-					<form action="" class="main__form form">
+				</div>
+			</section>
+			<div class="page__form form-home">
+				<div class="form-home__container">
+					<form data-watch data-watch-once method="GET" action="" class="form">
 						<div class="form__body">
 							<div class="form__header variables-form"></div>
 							<div class="form__main inputs-form">
@@ -108,35 +139,34 @@
 						</div>
 					</form>
 				</div>
-
-			</section>
+			</div>
 			<section class="page__air-classes air-classes">
 				<div class="air-classes__container">
-					<h2 class="air-classes__title title">Private Jet for Business & Leisure Purposes</h2>
+					<h2 data-watch data-watch-once class="air-classes__title title">Private Jet for Business & Leisure Purposes</h2>
 				</div>
 				<div class="air-classes__items">
-					<div class="item-air-class">
+					<div data-watch data-watch-once class="item-air-class">
 						<div class="item-air-class__rectangle"></div>
 						<div class="item-air-class__container">
 							<div class="item-air-class__img">
 								<picture><source srcset="img/air-classes/01.webp" type="image/webp"><img class="ibg" src="img/air-classes/01.jpg" alt="Image"></picture>
 							</div>
 							<div class="item-air-class__info">
-								<h3 class="item-air-class__name">Private Jet Charter</h3>
+								<h3 data-char data-la="300" class="item-air-class__name">Private Jet Charter</h3>
 								<div class="item-air-class__text">
 									It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="item-air-class">
+					<div data-watch data-watch-once class="item-air-class">
 						<div class="item-air-class__rectangle"></div>
 						<div class="item-air-class__container">
 							<div class="item-air-class__img">
 								<picture><source srcset="img/air-classes/02.webp" type="image/webp"><img class="ibg" src="img/air-classes/02.jpg" alt="Image"></picture>
 							</div>
 							<div class="item-air-class__info">
-								<h3 class="item-air-class__name">Business Jet Charter</h3>
+								<h3 data-char data-la="300" class="item-air-class__name">Business Jet Charter</h3>
 								<div class="item-air-class__text">
 									It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
 								</div>
@@ -147,9 +177,9 @@
 			</section>
 			<section class="page__specifications specifications">
 				<div class="specifications__container">
-					<h2 class="specifications__title title">Private Jet Performance and Specifications</h2>
-					<div class="specifications__wrapper">
-						<div class="specifications__items">
+					<h2 data-watch data-watch-once class="specifications__title title">Private Jet Performance and Specifications</h2>
+					<div data-watch data-watch-once class="specifications__items">
+						<div class="specifications__side">
 							<div class="item-specification">
 								<div class="item-specification__body">
 									<div class="item-specification__icon">
@@ -164,20 +194,23 @@
 							<div class="item-specification">
 								<div class="item-specification__body">
 									<div class="item-specification__icon">
-										<picture><source srcset="img/specifications/02.webp" type="image/webp"><img class="ibg" src="img/specifications/02.png" alt="Image"></picture>
+										<picture><source srcset="img/specifications/03.webp" type="image/webp"><img class="ibg" src="img/specifications/03.png" alt="Image"></picture>
 									</div>
-									<h3 class="item-specification__title">SAFETY AND SECURITY</h3>
+									<h3 class="item-specification__title">Personal schedule & booking</h3>
 									<div class="item-specification__subtitle">
 										It is a long established fact that a reader will be distracted by the readable
 									</div>
 								</div>
 							</div>
+						</div>
+						<picture><source srcset="img/specifications/main.webp" type="image/webp"><img class="specifications__decor" src="img/specifications/main.png" alt="Image"></picture>
+						<div class="specifications__side">
 							<div class="item-specification">
 								<div class="item-specification__body">
 									<div class="item-specification__icon">
-										<picture><source srcset="img/specifications/03.webp" type="image/webp"><img class="ibg" src="img/specifications/03.png" alt="Image"></picture>
+										<picture><source srcset="img/specifications/02.webp" type="image/webp"><img class="ibg" src="img/specifications/02.png" alt="Image"></picture>
 									</div>
-									<h3 class="item-specification__title">Personal schedule & booking</h3>
+									<h3 class="item-specification__title">SAFETY AND SECURITY</h3>
 									<div class="item-specification__subtitle">
 										It is a long established fact that a reader will be distracted by the readable
 									</div>
@@ -200,60 +233,48 @@
 			</section>
 			<section class="page__charters charters">
 				<div class="charters__container">
-					<h2 class="charters__title title">Luxury Charters</h2>
-					<div class="charters__slider swiper">
-						<div class="charters__wrapper swiper-wrapper">
-							<div class="charters__slide swiper-slide item-charter">
-								<div class="item-charter__body">
-									<a href="#" class="item-charter__img">
-										<picture><source srcset="img/charters/01.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/01.png" alt="Image"></picture>
-									</a>
-									<h3 class="item-charter__title">
-										<a href="#" class="item-charter__title-link">Piaggio P.180 Avanti</a>
-									</h3>
-								</div>
+					<h2 data-watch data-watch-once class="charters__title title">Luxury Charters</h2>
+					<div class="charters__items">
+						<article data-watch data-watch-once class="item-charter">
+							<div class="item-charter__body">
+								<a href="#" class="item-charter__img">
+									<picture><source srcset="img/charters/01.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/01.png" alt="Image"></picture>
+								</a>
+								<h3 class="item-charter__title">
+									<a href="#" class="item-charter__title-link">Piaggio P.180 Avanti</a>
+								</h3>
 							</div>
-							<div class="charters__slide swiper-slide item-charter">
-								<div class="item-charter__body">
-									<a href="#" class="item-charter__img">
-										<picture><source srcset="img/charters/02.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/02.png" alt="Image"></picture>
-									</a>
-									<h3 class="item-charter__title">
-										<a href="#" class="item-charter__title-link">Pilatus PC-12</a>
-									</h3>
-								</div>
+						</article>
+						<article data-watch data-watch-once class="item-charter">
+							<div class="item-charter__body">
+								<a href="#" class="item-charter__img">
+									<picture><source srcset="img/charters/02.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/02.png" alt="Image"></picture>
+								</a>
+								<h3 class="item-charter__title">
+									<a href="#" class="item-charter__title-link">Pilatus PC-12</a>
+								</h3>
 							</div>
-							<div class="charters__slide swiper-slide item-charter">
-								<div class="item-charter__body">
-									<a href="#" class="item-charter__img">
-										<picture><source srcset="img/charters/03.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/03.png" alt="Image"></picture>
-									</a>
-									<h3 class="item-charter__title">
-										<a href="#" class="item-charter__title-link">piper pa27 aztec</a>
-									</h3>
-								</div>
+						</article>
+						<article data-watch data-watch-once class="item-charter">
+							<div class="item-charter__body">
+								<a href="#" class="item-charter__img">
+									<picture><source srcset="img/charters/03.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/03.png" alt="Image"></picture>
+								</a>
+								<h3 class="item-charter__title">
+									<a href="#" class="item-charter__title-link">piper pa27 aztec</a>
+								</h3>
 							</div>
-							<div class="charters__slide swiper-slide item-charter">
-								<div class="item-charter__body">
-									<a href="#" class="item-charter__img">
-										<picture><source srcset="img/charters/04.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/04.png" alt="Image"></picture>
-									</a>
-									<h3 class="item-charter__title">
-										<a href="#" class="item-charter__title-link">Beech BE100 King Air</a>
-									</h3>
-								</div>
+						</article>
+						<article data-watch data-watch-once class="item-charter">
+							<div class="item-charter__body">
+								<a href="#" class="item-charter__img">
+									<picture><source srcset="img/charters/04.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/04.png" alt="Image"></picture>
+								</a>
+								<h3 class="item-charter__title">
+									<a href="#" class="item-charter__title-link">Beech BE100 King Air</a>
+								</h3>
 							</div>
-							<div class="charters__slide swiper-slide item-charter">
-								<div class="item-charter__body">
-									<a href="#" class="item-charter__img">
-										<picture><source srcset="img/charters/02.webp" type="image/webp"><img class="ibg item-charter__img-link" src="img/charters/02.png" alt="Image"></picture>
-									</a>
-									<h3 class="item-charter__title">
-										<a href="#" class="item-charter__title-link">Pilatus PC-12</a>
-									</h3>
-								</div>
-							</div>
-						</div>
+						</article>
 					</div>
 					<div class="charters__map">
 						<img class="ibg" src="img/charters/map.svg" alt="Image">
@@ -262,9 +283,9 @@
 			</section>
 			<section class="page__membership membership">
 				<div class="membership__container-big">
-					<h2 class="membership__title title">Enjoy our membership</h2>
+					<h2 data-watch data-watch-once class="membership__title title">Enjoy our membership</h2>
 					<div class="membership__items">
-						<div class="item-membership">
+						<div data-watch data-watch-once class="item-membership">
 							<div class="item-membership__body">
 								<div class="item-membership__title">Popular</div>
 								<div class="item-membership__subtitle">What You’ll Get</div>
@@ -280,7 +301,7 @@
 								<a href="#" class="item-membership__btn button button--fw">Choose</a>
 							</div>
 						</div>
-						<div class="item-membership _active">
+						<div data-watch data-watch-once class="item-membership _active">
 							<div class="item-membership__body">
 								<div class="item-membership__title">Business</div>
 								<div class="item-membership__subtitle">What You’ll Get</div>
@@ -296,7 +317,7 @@
 								<a href="#" class="item-membership__btn button button--fw">Choose</a>
 							</div>
 						</div>
-						<div class="item-membership">
+						<div data-watch data-watch-once class="item-membership">
 							<div class="item-membership__body">
 								<div class="item-membership__title">Elite</div>
 								<div class="item-membership__subtitle">What You’ll Get</div>
@@ -313,7 +334,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="membership__decor">
+					<div data-watch data-watch-once class="membership__decor">
 						<picture><source srcset="img/membership/main.webp" type="image/webp"><img class="ibg" src="img/membership/main.png" alt="Image"></picture>
 					</div>
 				</div>
@@ -345,7 +366,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240325182235"></script>
+	<script src="js/app.min.js?_v=20240326171354"></script>
 </body>
 
 </html>
